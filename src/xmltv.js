@@ -148,7 +148,7 @@ function createElements(channels, programs, date) {
                 [escapeString(review.value)]
               )
             ),
-            ...program.images.map(createImageElement),
+            ...program.images.map(image => el('icon', { src: image.value })), // fix for jellyfin poster icons
             ...program.icons.map(icon => el('icon', icon))
           ]
         )
